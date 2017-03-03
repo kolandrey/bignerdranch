@@ -45,10 +45,17 @@ public class CrimePagerActivity extends FragmentActivity {
                 return mCrimes.size();
             }
         });
+
+        for (int i = 0; i < mCrimes.size();i++){
+            if (mCrimes.get(i).getmId().equals(id)){
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
     }
 
     public static Intent newIntent (Context context, UUID id) {
-        Intent intent = new Intent(context, CrimeActivity.class);
+        Intent intent = new Intent(context, CrimePagerActivity.class);
         intent.putExtra(EXTRA_CRIME_ID, id);
         return intent;
     }

@@ -48,7 +48,6 @@ public class CrimeFragment extends Fragment {
     }
 
     public void setResults() {
-        setResults();
     }
 
     @Override
