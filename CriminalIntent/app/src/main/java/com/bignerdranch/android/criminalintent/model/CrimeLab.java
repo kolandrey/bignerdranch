@@ -10,6 +10,9 @@ public class CrimeLab {
     private static CrimeLab sCrimeLab;
     private List<Crime> mCrimes;
 
+    public void addCrime(Crime c) {
+        mCrimes.add(c);
+    }
 
     public static CrimeLab get(Context context) {
         if (sCrimeLab == null) {
@@ -20,12 +23,6 @@ public class CrimeLab {
 
     private CrimeLab(Context context) {
         mCrimes = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            Crime crime = new Crime();
-            crime.setmTitle("Crime #" + i);
-            crime.setmSolved(i % 2 == 0);
-            mCrimes.add(crime);
-        }
     }
 
     public List<Crime> getmCrimes() {
