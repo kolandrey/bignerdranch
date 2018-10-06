@@ -41,7 +41,7 @@ public class CrimeListFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_crime_list, container, false);
 
-        mCrimeRecycleView = (RecyclerView) view.findViewById(R.id.crime_recycle_view);
+        mCrimeRecycleView = view.findViewById(R.id.crime_recycle_view);
         mCrimeRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         updateUI();
